@@ -1,0 +1,18 @@
+{
+    "name": "atn/materialdesign",
+    "type": "pagekit-theme",
+    "version": "1.0.3",
+    "title": "Material design",
+    "description": "A blueprint to develop your own themes.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anh Tuan Nguyen",
+            "email": "1tuan1.play@gmail.com",
+            "homepage": "http://pagekit.com"
+        }
+    ],
+    "extra": {
+        "image": "image.jpg"
+    }
+}

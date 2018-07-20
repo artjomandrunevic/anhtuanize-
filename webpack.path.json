@@ -1,0 +1,10 @@
+[
+    {
+        "title": "style.default",
+        "path": "src/sass/default.scss"
+    },
+    {
+        "title": "app.default",
+        "path": "src/js/default.js"
+    }
+]
