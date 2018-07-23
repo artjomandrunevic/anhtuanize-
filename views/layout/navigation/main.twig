@@ -1,0 +1,32 @@
+<style>
+    .demo-layout-transparent {
+      /* background: url('public/assets/images/natural-light-aglow-still-hd.jpg') center / cover; */
+    }
+    .demo-layout-transparent .mdl-layout__header,
+    .demo-layout-transparent .mdl-layout__drawer-button {
+      /* This background is dark, so we set text to white. Use 87% black instead if
+         your background is light. */
+      color: white;
+    }
+</style>
+
+{{ dump( params ) }}
+
+<header class="mdl-layout__header mdl-layout__header--transparent">
+    <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">{{ params.title }}</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+    </div>
+</header>
+
+{% if root.getDepth() == 0 %}
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+{% endif %}
+{% for level1 in root.getChildren() %}
+<li class="{{ level1.hasChildren() ? '' }}">
+{% endfor %}
+{% if root.getDepth() == 0 %}
+    </ul>
+{% endif %}

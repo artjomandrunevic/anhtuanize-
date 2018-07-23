@@ -6,5 +6,9 @@
     {
         "title": "app.default",
         "path": "src/js/default.js"
+    },
+    {
+        "title": "site-theme",
+        "path": "app/components/site-theme.vue"
     }
 ]

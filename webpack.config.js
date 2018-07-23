@@ -60,7 +60,7 @@ module.exports = {
                             options: {
                                 includePaths: [
                                     path.resolve(
-                                        './node_modules/materialize-css/sass/materialize.scss'
+                                        './node_modules/material-design-lite/src/material-design-lite.scss'
                                     ),
                                 ],
                                 importLoaders: 2,
@@ -72,6 +72,10 @@ module.exports = {
                         },
                     ],
                 }),
+            },
+            {
+                test: /\.vue$/,
+                loader: "vue"
             },
             {
                 test: /\.(png|jpg|gif)$/,

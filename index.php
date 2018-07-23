@@ -38,6 +38,20 @@ return [
      * settings the user has set in the backend. The default configuration can therefore
      * be overwritten.
      */
-    'config' => []
+    'config' => [
+        'navbar_sticky' => false
+    ],
+
+    /**
+    * Change default layout to use a Twig template.
+    */
+    'layout' => 'views:template.twig',
+
+    'events' => [
+        'view.system/site/admin/settings' => function ($event, $view) use ($app) {
+            $view->script('site-theme', 'theme:public/asset/site-theme.js', 'site-settings');
+            $view->data('$theme', $this);
+        }
+    ],
 
 ];

@@ -3,7 +3,7 @@
 <?php endif ?>
 
     <?php foreach ($root->getChildren() as $node) : ?>
-    <li class="<?= $node->hasChildren() ? 'dropdown-trigger' : '' ?><?= $node->get('active') ? ' uk-active' : '' ?>" <?= ($root->getDepth() === 0 && $node->hasChildren()) ? 'data-uk-dropdown':'' ?>>
+    <li class="<?= $node->hasChildren() ? 'dropdown-trigger' : '' ?><?= $node->get('active') ? ' active' : '' ?>" <?= ($root->getDepth() === 0 && $node->hasChildren()) ? 'dropdown-trigger':'' ?>>
         <a href="<?= $node->getUrl() ?>"><?= $node->title ?></a>
 
         <?php if ($node->hasChildren()) : ?>

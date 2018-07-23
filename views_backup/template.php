@@ -22,7 +22,7 @@
                     <?php endif ?>
             </a>
             <?php if ($view->menu()->exists('main')) : ?>
-                <?= $view->menu('main') ?>
+                <?= $view->menu('main', 'menu-navbar.php') ?>
             <?php endif ?>
         </div>
     </nav>
