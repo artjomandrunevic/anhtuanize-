@@ -11,6 +11,17 @@ return [
     'name' => 'materialdesign',
 
     /**
+     * Resources
+     */
+    'resources' => [
+
+        'theme:' => '',
+        'views:' => 'views',
+        'assets:' => 'public/assets',
+
+    ],
+
+    /**
      * Define menu positions.
      * Will be listed in the backend so that users
      * can assign menus to these positions.
@@ -28,9 +39,21 @@ return [
      */
     'positions' => [
 
+        'navbar' => 'Navbar',
+        'top' => 'Top',
         'sidebar' => 'Sidebar',
+        'body1' => 'body1',
+        'body2' => 'body2',
+        'body3' => 'body3',
+        'body4' => 'body4',
+        'body5' => 'body5',
+        'bottom' => 'Bottom',
+        'footer' => 'Footer',
+        'offcanvas' => 'Offcanvas'
 
     ],
+
+    'settings' => '@site/settings#site-theme',
 
     /**
      * Define theme configuration.
@@ -49,9 +72,9 @@ return [
 
     'events' => [
         'view.system/site/admin/settings' => function ($event, $view) use ($app) {
-            $view->script('site-theme', 'theme:public/asset/site-theme.js', 'site-settings');
+            $view->script('site-theme', 'assets:js/site-theme.js', 'site-settings');
             $view->data('$theme', $this);
-        }
-    ],
+        },
+    ]
 
 ];
