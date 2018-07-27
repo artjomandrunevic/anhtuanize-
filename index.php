@@ -14,11 +14,9 @@ return [
      * Resources
      */
     'resources' => [
-
         'theme:' => '',
         'views:' => 'views',
         'assets:' => 'public/assets',
-
     ],
 
     /**
@@ -27,9 +25,7 @@ return [
      * can assign menus to these positions.
      */
     'menus' => [
-
         'main' => 'Main',
-
     ],
 
     /**
@@ -38,7 +34,6 @@ return [
      * can publish widgets in these positions.
      */
     'positions' => [
-
         'navbar' => 'Navbar',
         'top' => 'Top',
         'sidebar' => 'Sidebar',
@@ -50,7 +45,6 @@ return [
         'bottom' => 'Bottom',
         'footer' => 'Footer',
         'offcanvas' => 'Offcanvas'
-
     ],
 
     'settings' => '@site/settings#site-theme',
@@ -62,7 +56,8 @@ return [
      * be overwritten.
      */
     'config' => [
-        'navbar_sticky' => false
+        'logo_contrast' => '',
+        'logo_offcanvas' => ''
     ],
 
     /**
@@ -71,10 +66,10 @@ return [
     'layout' => 'views:template.twig',
 
     'events' => [
-        'view.system/site/admin/settings' => function ($event, $view) use ($app) {
-            $view->script('site-theme', 'assets:js/site-theme.js', 'site-settings');
-            $view->data('$theme', $this);
-        },
+        // 'view.system/site/admin/settings' => function ($event, $view) use ($app) {
+        //     $view->script('site-theme', 'assets:js/site-theme.js', 'site-settings');
+        //     $view->data('$theme', $this);
+        // },
     ]
 
 ];

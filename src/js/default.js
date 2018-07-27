@@ -1,3 +1,6 @@
 'use strict'
-import {jQuery as $} from 'jquery'
-import 'material-design-lite'
+import 'materialize-css'
+
+// navbar
+$('#mobile-main-menu').sidenav()
+console.log($('#mobile-main-menu').length)
