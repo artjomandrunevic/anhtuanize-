@@ -43,8 +43,21 @@ return [
         'body4' => 'body4',
         'body5' => 'body5',
         'bottom' => 'Bottom',
-        'footer' => 'Footer',
-        'offcanvas' => 'Offcanvas'
+        'footer' => 'footer',
+        'footer-copyright' => 'footer-copyright',
+    ],
+
+    /**
+     * Widget defaults
+     */
+    'widget' => [
+        'title_hide' => false,
+        'title_size' => 'uk-panel-title',
+        'alignment' => '',
+        'padding' => '',
+        'html_class' => '',
+        'panel' => 'uk-panel-box',
+        'animation' => ''
     ],
 
     'settings' => '@site/settings#site-theme',
@@ -56,8 +69,8 @@ return [
      * be overwritten.
      */
     'config' => [
-        'logo_contrast' => '',
-        'logo_offcanvas' => ''
+        'navbar-fixed' => false,
+        'sticky-footer' => true
     ],
 
     /**

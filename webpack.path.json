@@ -4,6 +4,10 @@
         "path": "src/sass/default.scss"
     },
     {
+        "title": "style.sticky-footer",
+        "path": "src/sass/sticky_footer.scss"
+    },
+    {
         "title": "app.default",
         "path": "src/js/default.js"
     },

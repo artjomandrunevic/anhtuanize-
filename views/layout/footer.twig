@@ -1,0 +1,16 @@
+<footer class="page-footer">
+    {% if view.position().exists('footer') %}
+        <div class="container">
+            <div class="row">
+                {{ view.position('footer') | raw }}
+            </div>
+        </div>
+    {% endif %}
+    <div class="footer-copyright">
+        <div class="container">
+            {% if view.position().exists('footer-copyright') %}
+                {{ view.position('footer-copyright') | raw }}
+            {% endif %}
+        </div>
+    </div>
+</footer>

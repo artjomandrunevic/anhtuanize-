@@ -4,11 +4,14 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
         {{ view.render('head') | raw }}
         <!-- STYLE -->
         {{ view.style('theme', 'assets:css/style.default.css') }}
-        <!-- SCRIPT -->
-        {{ view.script('default', 'assets:js/app.default.js') }}
+        {% if params['sticky-footer'] %}
+            {{ view.style('sticky', 'assets:css/style.sticky-footer.css') }}
+        {% endif %}
+        {{ view.script('defailt', 'assets:js/app.default.js') }}
 
     </head>
     <body>
@@ -17,10 +20,12 @@
             {{ view.menu('main', 'layout/header.twig') | raw }}
         {% endif %}
 
-        <main class="mdl-layout__content">
-            <div class="mdl-grid">
-                <div class="mdl-cell mdl-cell--4-col">{{ view.render('content')|raw }}</div>
+        <main class="container">
+            <div class="row">
+                {{ view.render('content')|raw }}
             </div>
         </main>
+
+        {% include 'views:/layout/footer.twig' %}
     </body>
 </html>

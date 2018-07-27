@@ -1,6 +1,9 @@
 'use strict'
-import 'materialize-css'
+
+import WDR from 'when-dom-ready'
+import 'materialize-css/dist/js/materialize'
 
 // navbar
-$('#mobile-main-menu').sidenav()
-console.log($('#mobile-main-menu').length)
+WDR().then(() => {
+    M.Sidenav.init($('#mobile-main-menu'))
+})

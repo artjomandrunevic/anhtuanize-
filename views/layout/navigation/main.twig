@@ -1,3 +1,6 @@
+{% if params['navbar-fixed'] %}
+    <div class="navbar-fixed">
+{% endif %}
 <nav>
   <div class="nav-wrapper">
     <a href="#!" class="brand-logo">{{ params.title }}</a>
@@ -11,6 +14,9 @@
     {% endif %}
   </div>
 </nav>
+{% if params['navbar-fixed'] %}
+    </div>
+{% endif %}
 
 {% if root.getDepth() == 0 %}
     <ul class="sidenav" id="mobile-main-menu">
