@@ -11,6 +11,7 @@
         {% if params['sticky-footer'] %}
             {{ view.style('sticky', 'assets:css/style.sticky-footer.css') }}
         {% endif %}
+        {{ view.script('jquery') }}
         {{ view.script('defailt', 'assets:js/app.default.js') }}
 
     </head>
@@ -25,6 +26,10 @@
                 {{ view.render('content')|raw }}
             </div>
         </main>
+
+        <pre>
+          {{ params['atn'] }}
+        </pre>
 
         {% include 'views:/layout/footer.twig' %}
     </body>

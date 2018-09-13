@@ -1,5 +1,5 @@
 <template>
-    <div>
+
     <div class="uk-margin uk-flex uk-flex-space-between uk-flex-wrap" data-uk-margin>
         <div data-uk-margin>
             <h2 class="uk-margin-remove">{{ 'Theme' | trans }}</h2>
@@ -10,6 +10,23 @@
     </div>
 
     <div class="uk-form uk-form-horizontal">
+
+        <div class="uk-form-row">
+            <label class="uk-form-label">{{ 'Logo position' | trans }}</label>
+            <div class="uk-form-controls uk-form-width-large">
+                <p class="uk-form-help-block">
+                    <input type="radio" v-model="config.logo_position" name="logo-position" value="left"/> {{ 'Left' | trans }}
+                </p>
+                <p class="uk-form-help-block">
+                    <input type="radio" v-model="config.logo_position" name="logo-position" value="center"/> {{ 'Center' | trans }}
+                </p>
+                <p class="uk-form-help-block">
+                    <input type="radio" v-model="config.logo_position" name="logo-position" value="right"/> {{ 'Right' | trans }}
+                </p>
+            </div>
+        </div>
+
+        <hr/>
 
         <div class="uk-form-row">
             <label class="uk-form-label">{{ 'Logo Contrast' | trans }}</label>
@@ -26,8 +43,9 @@
                 <p class="uk-form-help-block">{{ 'Select an optional logo for the off-canvas menu.' | trans }}</p>
             </div>
         </div>
+
     </div>
-</div>
+
 </template>
 
 <script>

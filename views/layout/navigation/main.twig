@@ -3,7 +3,7 @@
 {% endif %}
 <nav>
   <div class="nav-wrapper">
-    <a href="#!" class="brand-logo">{{ params.title }}</a>
+    <a href="#!" class="brand-logo {{ params['logo_position'] }}">{{ params.title }}</a>
     <a href="#" data-target="mobile-main-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     {% if root.getDepth() == 0 %}
         <ul class="right hide-on-med-and-down">

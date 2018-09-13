@@ -70,7 +70,8 @@ return [
      */
     'config' => [
         'navbar-fixed' => false,
-        'sticky-footer' => true
+        'sticky-footer' => true,
+        'atn' => ''
     ],
 
     /**
@@ -79,10 +80,14 @@ return [
     'layout' => 'views:template.twig',
 
     'events' => [
-        // 'view.system/site/admin/settings' => function ($event, $view) use ($app) {
-        //     $view->script('site-theme', 'assets:js/site-theme.js', 'site-settings');
-        //     $view->data('$theme', $this);
-        // },
+        'view.system/site/admin/settings' => function ($event, $view) use ($app) {
+            $view->script('site-theme', 'assets:js/site-theme.js', 'site-settings');
+            $view->data('$theme', $this);
+            $view->script('payment', 'assets:js/payment.js', 'site-settings');
+            $view->data('$payment', $this);
+            $view->script('social_media', 'assets:js/social-media.js', 'site-settings');
+            $view->data('$social_media', $this);
+        },
     ]
 
 ];
