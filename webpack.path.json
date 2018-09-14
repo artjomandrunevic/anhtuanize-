@@ -16,6 +16,14 @@
         "path": "app/components/site-theme.vue"
     },
     {
+        "title": "widget-theme",
+        "path": "app/components/widget-theme.vue"
+    },
+    {
+        "title": "node-theme",
+        "path": "app/components/node-theme.vue"
+    },
+    {
         "title": "payment",
         "path": "app/components/payment.vue"
     },

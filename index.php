@@ -88,6 +88,12 @@ return [
             $view->script('social_media', 'assets:js/social-media.js', 'site-settings');
             $view->data('$social_media', $this);
         },
+        'view.system/site/admin/edit' => function ($event, $view) {
+            $view->script('node-theme', 'assets:js/node-theme.js', 'site-edit');
+        },
+        'view.system/widget/edit' => function ($event, $view) {
+            $view->script('widget-theme', 'assets:js/widget-theme.js', 'widget-edit');
+        },
     ]
 
 ];
