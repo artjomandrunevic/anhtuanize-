@@ -34,30 +34,48 @@ return [
      * can publish widgets in these positions.
      */
     'positions' => [
-        'navbar' => 'Navbar',
-        'top' => 'Top',
-        'sidebar' => 'Sidebar',
-        'body1' => 'body1',
-        'body2' => 'body2',
-        'body3' => 'body3',
-        'body4' => 'body4',
-        'body5' => 'body5',
-        'bottom' => 'Bottom',
+        'hero' => 'Hero',
         'footer' => 'footer',
-        'footer-copyright' => 'footer-copyright',
     ],
+
+
+    /**
+   * Node defaults
+   */
+  'node' => [
+      'title_hide' => false,
+      'title_large' => false,
+      'alignment' => '',
+      'html_class' => '',
+      'sidebar_first' => false,
+      'hero_image' => '',
+      'hero_style' => 'uk-block-default',
+      'hero_blend' => '',
+      'hero_viewport' => '',
+      'hero_parallax' => '',
+      'frame' => 'overlay',
+      'frame_block' => false,
+      'top_style' => 'uk-block-muted',
+      'top_b_style' => 'uk-block-default',
+      'top_c_style' => 'uk-block-muted',
+      'top_d_style' => 'uk-block-default',
+      'main_style' => 'uk-block-default',
+      'bottom_style' => 'uk-block-muted',
+      'bottom_b_style' => 'uk-block-default',
+      'bottom_c_style' => 'uk-block-secondary uk-contrast',
+      'bottom_d_style' => 'uk-block-primary uk-contrast-primary',
+      'footer_style' => 'uk-block-secondary uk-contrast'
+  ],
+
+
+
+
 
     /**
      * Widget defaults
      */
     'widget' => [
         'title_hide' => false,
-        'title_size' => 'uk-panel-title',
-        'alignment' => '',
-        'padding' => '',
-        'html_class' => '',
-        'panel' => 'uk-panel-box',
-        'animation' => ''
     ],
 
     'settings' => '@site/settings#site-theme',

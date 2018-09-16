@@ -1,27 +1,16 @@
-{% if params['navbar-fixed'] %}
-    <div class="navbar-fixed">
-{% endif %}
-<nav>
-  <div class="nav-wrapper">
-    <a href="#!" class="brand-logo {{ params['logo_position'] }}">{{ params.title }}</a>
-    <a href="#" data-target="mobile-main-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="{{ view.url().get() }}">
+      <img class="navbar-band-logo" src="{{ params['logo_contrast'] }}">
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-end">
     {% if root.getDepth() == 0 %}
-        <ul class="right hide-on-med-and-down">
-            {% for level1 in root.getChildren() %}
-                <li class="{{ level1.get('active') ? 'active' }}"><a href="{{ level1.link }}">{{ level1.title }}</a></li>
-            {% endfor %}
-        </ul>
+      {% for level1 in root.getChildren() %}
+          <a class="{{ level1.get('active') ? 'is-active' }} navbar-item" href="{{ level1.link }}">{{ level1.title }} </a>
+      {% endfor %}
     {% endif %}
   </div>
+</div>
 </nav>
-{% if params['navbar-fixed'] %}
-    </div>
-{% endif %}
-
-{% if root.getDepth() == 0 %}
-    <ul class="sidenav" id="mobile-main-menu">
-      {% for level1 in root.getChildren() %}
-          <li class="{{ level1.get('active') ? 'active' }}"><a href="{{ level1.link }}">{{ level1.title }}</a></li>
-      {% endfor %}
-    </ul>
-{% endif %}

@@ -58,11 +58,6 @@ module.exports = {
                         {
                             loader: 'sass-loader',
                             options: {
-                                includePaths: [
-                                    path.resolve(
-                                        './node_modules/materialize-css/sass/materialize.scss'
-                                    ),
-                                ],
                                 importLoaders: 2,
                                 modules: true,
                                 minimize: true,

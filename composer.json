@@ -2,7 +2,7 @@
     "name": "atn/materialdesign",
     "type": "pagekit-theme",
     "version": "1.0.3",
-    "title": "Material design",
+    "title": "Anhtuanize",
     "description": "A blueprint to develop your own themes.",
     "license": "MIT",
     "authors": [
@@ -13,6 +13,6 @@
         }
     ],
     "extra": {
-        "image": "image.jpg"
+        "image": "image.png"
     }
 }

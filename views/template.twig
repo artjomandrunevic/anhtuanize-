@@ -17,19 +17,22 @@
     </head>
     <body>
         <!-- Render menu position -->
+
+
         {% if view.menu().exists('main') %}
             {{ view.menu('main', 'layout/header.twig') | raw }}
         {% endif %}
 
+        {{ view.position('hero', 'widget.twig') | raw }}
+
+
         <main class="container">
             <div class="row">
-                {{ view.render('content')|raw }}
+                {{ view.render('content') | raw }}
             </div>
         </main>
 
-        <pre>
-          {{ params['atn'] }}
-        </pre>
+
 
         {% include 'views:/layout/footer.twig' %}
     </body>

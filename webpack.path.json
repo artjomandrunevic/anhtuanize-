@@ -2,33 +2,5 @@
     {
         "title": "style.default",
         "path": "src/sass/default.scss"
-    },
-    {
-        "title": "style.sticky-footer",
-        "path": "src/sass/sticky_footer.scss"
-    },
-    {
-        "title": "app.default",
-        "path": "src/js/default.js"
-    },
-    {
-        "title": "site-theme",
-        "path": "app/components/site-theme.vue"
-    },
-    {
-        "title": "widget-theme",
-        "path": "app/components/widget-theme.vue"
-    },
-    {
-        "title": "node-theme",
-        "path": "app/components/node-theme.vue"
-    },
-    {
-        "title": "payment",
-        "path": "app/components/payment.vue"
-    },
-    {
-        "title": "social-media",
-        "path": "app/components/social-media.vue"
     }
 ]

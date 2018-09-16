@@ -1,0 +1,8 @@
+{% for widget in widgets %}
+    <div class="ffff">
+        {% if widget.theme['title_hide'] == false %}
+            <h3>{{ widget.title }}</h3>
+        {% endif %}
+        {{ widget.data['result'] | raw }}
+    </div>
+{% endfor %}
